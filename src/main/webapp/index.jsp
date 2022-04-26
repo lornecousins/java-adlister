@@ -3,7 +3,6 @@
 <html>
 <head>
     <title><%= "some title" %></title>
-    + c
 </head>
 <body>
     <c:if test="true">
