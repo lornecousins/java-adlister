@@ -11,8 +11,9 @@ public class CounterServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         counter += 1;
         if (request.getParameter("reset") != null){
-            counter = 1;
-        }
+            counter = 0;
+            response.sendRedirect("/count");
+        } else {
             response.getWriter().println("<h1>The count is " + counter + ".</h1>");
     }
 }
